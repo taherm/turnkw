@@ -2751,7 +2751,7 @@ html[dir="rtl"] #header .tip-light:before {
 }
 @media (max-width: 991px) {
   #header .header-nav-main nav > ul > li > a {
-    color: #0088cc;
+    color: white;
   }
   #header .header-nav-main nav > ul > li > a:active {
     color: #0088cc;

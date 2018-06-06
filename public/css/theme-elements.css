@@ -500,7 +500,7 @@ ul.nav-pills > li > a.active:hover, ul.nav-pills > li > a.active:focus {
 }
 
 .show > .nav-pills .nav-link {
-	background-color: transparent;
+	background-color: black;
 }
 
 /* Nav Secondary */
