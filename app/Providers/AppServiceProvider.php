@@ -82,6 +82,18 @@ class AppServiceProvider extends ServiceProvider
             $view->with('slide', $slide);
         });
         
+        view()->composer('partials.header', function($view)
+        {
+            $categories = \App\Menu::all();
+            $view->with('cat', $categories);
+        });
+
+        view()->composer('partials.header-ar', function($view)
+        {
+            $categories = \App\Menu::all();
+            $view->with('cat', $categories);
+        });
+    
 
         Schema::defaultStringLength(191);
     }

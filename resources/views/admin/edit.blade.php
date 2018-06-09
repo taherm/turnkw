@@ -18,11 +18,11 @@
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Description(English)</label>
-    <textarea name="description_en" id="editor" style="visibility:visible" placeholder="{{$serv->description_en}}">{{$serv->description}}</textarea>  
+    <textarea name="description_en" class="editor" style="visibility:visible" placeholder="{{$serv->description_en}}">{{$serv->description_en}}</textarea>  
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Description(Arabic)</label>
-    <textarea name="description_ar" id="editor" style="visibility:visible" placeholder="{{$serv->description_ar}}">{{$serv->description}}</textarea>  
+    <textarea name="description_ar" class="editor" style="visibility:visible" placeholder="{{$serv->description_ar}}">{{$serv->description_ar}}</textarea>  
     </div>
     <div class="form-group">
         <label for="exampleInputFile">Image</label>

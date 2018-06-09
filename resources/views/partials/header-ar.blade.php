@@ -41,11 +41,33 @@
 عن تساويق														</a>
 													</li>
 
-                                                    <li class="">
-														<a class="nav-link" href="/services-ar">
-
-خدماتنا														</a>
+                                                  @foreach($cat as $item)
+			                @if($item->services->count())
+													
+													<li class="dropdown">
+														<a class="dropdown-item dropdown-toggle" onclick="return false" style="cursor:default" href="/" >
+														{{$item->title_ar}}
+														</a>
+														<ul class="dropdown-menu">
+														@foreach($item->services as $submenu)
+															<li>
+																<a class="dropdown-item" href="{{url('services_ar/'.$submenu->id)}}">{{$submenu->title_ar}}</a>
+															</li>
+															@endforeach
+														</ul>
+														
 													</li>
+													
+													@else
+													<li class="">
+														<a class="nav-link" href="/">
+														{{$item->title_ar}}
+														</a>
+													
+													</li>
+													
+													@endif
+				@endforeach
 
                                                    
 													<li class="">

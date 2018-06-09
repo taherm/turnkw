@@ -42,11 +42,33 @@
 														</a>
 													</li>
 
-													<li class="">
-														<a class="nav-link" href="#">
-															Services
+												@foreach($cat as $item)
+			                @if($item->services->count())
+													
+													<li class="dropdown">
+														<a class="dropdown-item dropdown-toggle" onclick="return false" style="cursor:default" href="/" >
+														{{$item->title_en}}
 														</a>
+														<ul class="dropdown-menu">
+														@foreach($item->services as $submenu)
+															<li>
+																<a class="dropdown-item" href="{{url('services_en/'.$submenu->id)}}">{{$submenu->title_en}}</a>
+															</li>
+															@endforeach
+														</ul>
+														
 													</li>
+													
+													@else
+													<li class="">
+														<a class="nav-link" href="/">
+														{{$item->title_en}}
+														</a>
+													
+													</li>
+													
+													@endif
+				@endforeach
 
 													<li class="">
 														<a class="nav-link" href="/workspace">

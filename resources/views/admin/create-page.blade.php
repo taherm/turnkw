@@ -16,11 +16,11 @@
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Description(English)</label>
-    <textarea rows="2" cols="128" name="description_en" id="editor" ></textarea>  
+    <textarea rows="2" cols="128" name="description_en" class="editor" ></textarea>  
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Description(Arabic)</label>
-    <textarea rows="2" cols="128" name="description_ar" id="editor" ></textarea>  
+    <textarea rows="2" cols="128" name="description_ar" class="editor" ></textarea>  
     </div>
     <div class="form-group">
         <label for="exampleInputFile">Image</label>

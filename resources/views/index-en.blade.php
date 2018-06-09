@@ -36,14 +36,15 @@
 
 	<div class="row portfolio-list sort-destination" data-sort-id="portfolio">
 	
+	@foreach($ser as $s)
 		<div class="col-lg-4 isotope-item websites" id="websites">
 			<div class="portfolio-item">
-				<a href="/marketing-plan">
+				<a href="{{ url('services_en/'.$s->id) }}">
 					<span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
 						<span class="thumb-info-wrapper">
-									<img src="{{asset('uploads/marketing-plan.jpg')}}" class="img-fluid" alt="">
+									<img src="{{asset('uploads/'.$s->image)}}" class="img-fluid" alt="">
 							<span class="thumb-info-title">
-								<span class="thumb-info-inner text-1 line-height-xs pt-1">Marketing Plan</span>
+								<span class="thumb-info-inner text-1 line-height-xs pt-1">{{$s->title_en}}</span>
 								
 							</span>
 						</span>
@@ -51,103 +52,8 @@
 				</a>
 			</div>
 		</div>
+		@endforeach
 		
-		<div class="col-lg-4 isotope-item websites" id="websites">
-			<div class="portfolio-item">
-				<a href="/where-to-go">
-					<span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
-						<span class="thumb-info-wrapper">
-							<img src="{{asset('uploads/market-research.jpg')}}" class="img-fluid" alt="">
-							<span class="thumb-info-title">
-								<span class="thumb-info-inner text-1 line-height-xs pt-1">Where Do You Want to Go</span>
-								
-							</span>
-						</span>
-					</span>
-				</a>
-			</div>
-		</div>
-
-		<div class="col-lg-4 isotope-item websites" id="websites">
-			<div class="portfolio-item">
-				<a href="/market-research">
-					<span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
-						<span class="thumb-info-wrapper">
-							<img src="{{asset('uploads/market-research2.jpg')}}" class="img-fluid" alt="">
-							<span class="thumb-info-title">
-								<span class="thumb-info-inner text-1 line-height-xs pt-1">Marketing Research</span>
-								
-							</span>
-						</span>
-					</span>
-				</a>
-			</div>
-		</div>
-
-		<div class="col-lg-4 isotope-item websites" id="websites">
-			<div class="portfolio-item">
-				<a href="/branding">
-					<span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
-						<span class="thumb-info-wrapper">
-							<img src="{{asset('uploads/branding.jpg')}}" class="img-fluid" alt="">
-							<span class="thumb-info-title">
-								<span class="thumb-info-inner text-1 line-height-xs pt-1">Building Marketing Identity</span>
-								
-							</span>
-						</span>
-					</span>
-				</a>
-			</div>
-		</div>
-
-		<div class="col-lg-4 isotope-item websites" id="websites">
-			<div class="portfolio-item">
-				<a href="/training">
-					<span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
-						<span class="thumb-info-wrapper">
-							<img src="{{asset('uploads/training.jpg')}}" class="img-fluid" alt="">
-							<span class="thumb-info-title">
-								<span class="thumb-info-inner text-1 line-height-xs pt-1">Training and Development</span>
-								
-							</span>
-						</span>
-					</span>
-				</a>
-			</div>
-		</div>
-
-		<div class="col-lg-4 isotope-item websites" id="websites">
-			<div class="portfolio-item">
-				<a href="/consulting">
-					<span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
-						<span class="thumb-info-wrapper">
-							<img src="{{asset('uploads/consultation.jpg')}}" class="img-fluid" alt="">
-							<span class="thumb-info-title">
-								<span class="thumb-info-inner text-1 line-height-xs pt-1">Marketing Consulting</span>
-								
-							</span>
-						</span>
-					</span>
-				</a>
-			</div>
-		</div>
-
-		<div class="col-lg-4 isotope-item websites" id="websites">
-			<div class="portfolio-item">
-				<a href="/emarketing">
-					<span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
-						<span class="thumb-info-wrapper">
-							<img src="{{asset('uploads/emarketing.jpg')}}" class="img-fluid" alt="">
-							<span class="thumb-info-title">
-								<span class="thumb-info-inner text-1 line-height-xs pt-1">Digital Marketing</span>
-								
-							</span>
-						</span>
-					</span>
-				</a>
-			</div>
-		</div>
-
 
 
 	</div>

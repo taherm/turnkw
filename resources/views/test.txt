@@ -1,0 +1,17 @@
+@foreach($ser as $s)
+		<div class="col-lg-4 isotope-item websites" id="websites">
+			<div class="portfolio-item">
+				<a href="{{ url('services/'.$s->id) }}">
+					<span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
+						<span class="thumb-info-wrapper">
+									<img src="{{asset('uploads/'.$s->image)}}" class="img-fluid" alt="">
+							<span class="thumb-info-title">
+								<span class="thumb-info-inner text-1 line-height-xs pt-1">{{$s->title}}</span>
+								
+							</span>
+						</span>
+					</span>
+				</a>
+			</div>
+		</div>
+		@endforeach

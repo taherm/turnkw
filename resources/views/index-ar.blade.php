@@ -36,14 +36,15 @@
 
 	<div class="row portfolio-list sort-destination" data-sort-id="portfolio">
 	
+	@foreach($ser as $s)
 		<div class="col-lg-4 isotope-item websites" id="websites">
 			<div class="portfolio-item">
-				<a href="/marketing-plan-ar">
+				<a href="{{ url('services_ar/'.$s->id) }}">
 					<span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
 						<span class="thumb-info-wrapper">
-									<img src="{{asset('uploads/marketing-plan.jpg')}}" class="img-fluid" alt="">
+									<img src="{{asset('uploads/'.$s->image)}}" class="img-fluid" alt="">
 							<span class="thumb-info-title">
-								<span class="thumb-info-inner text-1 line-height-xs pt-1">الخطة التسويقية</span>
+								<span class="thumb-info-inner text-1 line-height-xs pt-1">{{$s->title_ar}}</span>
 								
 							</span>
 						</span>
@@ -51,105 +52,7 @@
 				</a>
 			</div>
 		</div>
-		
-		<div class="col-lg-4 isotope-item websites" id="websites">
-			<div class="portfolio-item">
-				<a href="/where-to-go-ar">
-					<span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
-						<span class="thumb-info-wrapper">
-							<img src="{{asset('uploads/market-research.jpg')}}" class="img-fluid" alt="">
-							<span class="thumb-info-title">
-								<span class="thumb-info-inner text-1 line-height-xs pt-1">إلى أين تريد الوصول؟</span>
-								
-							</span>
-						</span>
-					</span>
-				</a>
-			</div>
-		</div>
-
-		<div class="col-lg-4 isotope-item websites" id="websites">
-			<div class="portfolio-item">
-				<a href="/market-research-ar">
-					<span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
-						<span class="thumb-info-wrapper">
-							<img src="{{asset('uploads/market-research2.jpg')}}" class="img-fluid" alt="">
-							<span class="thumb-info-title">
-								<span class="thumb-info-inner text-1 line-height-xs pt-1">البحث التسويقي</span>
-								
-							</span>
-						</span>
-					</span>
-				</a>
-			</div>
-		</div>
-
-		<div class="col-lg-4 isotope-item websites" id="websites">
-			<div class="portfolio-item">
-				<a href="/branding-ar">
-					<span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
-						<span class="thumb-info-wrapper">
-							<img src="{{asset('uploads/branding.jpg')}}" class="img-fluid" alt="">
-							<span class="thumb-info-title">
-								<span class="thumb-info-inner text-1 line-height-xs pt-1">بناء الهوية التسويقية</span>
-								
-							</span>
-						</span>
-					</span>
-				</a>
-			</div>
-		</div>
-
-		<div class="col-lg-4 isotope-item websites" id="websites">
-			<div class="portfolio-item">
-				<a href="/training-ar">
-					<span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
-						<span class="thumb-info-wrapper">
-							<img src="{{asset('uploads/training.jpg')}}" class="img-fluid" alt="">
-							<span class="thumb-info-title">
-								<span class="thumb-info-inner text-1 line-height-xs pt-1">التدريب والتطوير</span>
-								
-							</span>
-						</span>
-					</span>
-				</a>
-			</div>
-		</div>
-
-		<div class="col-lg-4 isotope-item websites" id="websites">
-			<div class="portfolio-item">
-				<a href="/consulting-ar">
-					<span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
-						<span class="thumb-info-wrapper">
-							<img src="{{asset('uploads/consultation.jpg')}}" class="img-fluid" alt="">
-							<span class="thumb-info-title">
-								<span class="thumb-info-inner text-1 line-height-xs pt-1">
-الخدمات / العقود الاستشارية
-</span>
-								
-							</span>
-						</span>
-					</span>
-				</a>
-			</div>
-		</div>
-
-		<div class="col-lg-4 isotope-item websites" id="websites">
-			<div class="portfolio-item">
-				<a href="/emarketing-ar">
-					<span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
-						<span class="thumb-info-wrapper">
-							<img src="{{asset('uploads/emarketing.jpg')}}" class="img-fluid" alt="">
-							<span class="thumb-info-title">
-								<span class="thumb-info-inner text-1 line-height-xs pt-1">إدارة الحملات التسويقية والتسويق الإلكتروني</span>
-								
-							</span>
-						</span>
-					</span>
-				</a>
-			</div>
-		</div>
-
+		@endforeach
 
 
 	</div>

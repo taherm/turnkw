@@ -1,5 +1,6 @@
 <?php
-
+use App\Service;
+use App\Menu;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +14,18 @@
 
 Auth::routes();
 
+
+
 Route::get('/', function () {
-    return view('index-en');
+   
+    $ser=Service::all();
+    return view('index-en',compact('ser'));
 });
 
 Route::get('/home-ar', function () {
-    return view('index-ar');
+    $ser=Service::all();
+    return view('index-ar',compact('ser'));
+   
 });
 
 Route::get('/workspace', function () {
@@ -125,8 +132,15 @@ Route::get('/emarketing-ar', function () {
 });
 
 
+Route::get('services_en/{id}', function ($id) {
+    $ser=Service::find($id);
+        return view('service-layout-en',compact('ser'));
+});
 
-
+Route::get('services_ar/{id}', function ($id) {
+    $ser=Service::find($id);
+        return view('service-layout-ar',compact('ser'));
+});
 
 Route::get('admin','AdminController@index')->middleware('auth');
 Route::post('admin/slider','AdminController@add_slider')->middleware('auth');
