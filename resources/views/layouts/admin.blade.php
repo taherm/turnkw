@@ -65,18 +65,7 @@
                             <span class="nav-label black">Pages</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="/admin/add-slider" class=" hvr-bounce-to-right">
-                            <i class="fa fa-snowflake-o nav_icon" ></i>
-                            <span class="nav-label black">Add Slider</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/admin/delete-slider" class=" hvr-bounce-to-right">
-                            <i class="fa fa-snowflake-o nav_icon" ></i>
-                            <span class="nav-label black">Delete Slider</span>
-                        </a>
-                    </li>
+                   
 
                      
 
