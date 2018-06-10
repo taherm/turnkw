@@ -178,7 +178,7 @@ Route::get('admin/sub-menu', function () {
     return view('admin.sub-menu');
 })->middleware('auth');
 Route::get('admin/menu', function () {
-    $cat =\App\menu::all();
+    $cat =Menu::all();
     return view('admin.menu',compact('cat'));
 })->middleware('auth');
 Route::get('admin/delete-menu', function () {
