@@ -26,7 +26,7 @@
                         </a>
                         </td>
 
-                     <td>   <form method="POST" action="/admin/delete-menu/{{$item->id}}">
+                     <td>   <form method="POST" action="/admin/delete-menu/{{$item->id}}" class="delete">
 										{{ csrf_field() }}
 										<input name="_method" value="delete" type="hidden">
 										<button class="btn btn-danger btn-xs" type="submit">Delete</button>

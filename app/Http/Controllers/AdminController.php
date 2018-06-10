@@ -138,12 +138,20 @@ class AdminController extends Controller
         $serv->title_ar=request('title_ar');
         $serv->description_en=request('description_en');
         $serv->description_ar=request('description_ar');
+        
         $image=request()->image;
-        $imageName = md5(uniqid(rand() * (time()))) . '.' . $image->getClientOriginalExtension();
-        $savePath = public_path(self::UPLOAD_PATH . $imageName);
-        Image::make($image)->save($savePath, 100);
-        $fullImagePath =$imageName;
-        $serv->image=$fullImagePath;
+        if($image==null)
+        {
+
+        }
+        else{
+            $imageName = md5(uniqid(rand() * (time()))) . '.' . $image->getClientOriginalExtension();
+            $savePath = public_path(self::UPLOAD_PATH . $imageName);
+            Image::make($image)->save($savePath, 100);
+            $fullImagePath =$imageName;
+            $serv->image=$fullImagePath;
+            
+        }
         $serv->Menu_id=Menu::where('title_en',request('menu'))->first()->id;
         $serv->save();
         session()->flash('message','Page Updated!');

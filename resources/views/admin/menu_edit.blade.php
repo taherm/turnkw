@@ -19,13 +19,13 @@
         
         <div class="form-group">
     <label for="companyName">Title(English)</label>
-    <input class="form-control" placeholder="" name="title_en" type="text" id="en">
+    <input class="form-control" value="{{$serv->title_en}}" name="title_en" type="text" id="en">
 </div>
 
 
 <div class="form-group">
     <label for="companyName">Title(Arabic)</label>
-    <input class="form-control" placeholder="" name="title_ar" type="text" id="ar">
+    <input class="form-control" value="{{$serv->title_ar}}" name="title_ar" type="text" id="ar">
 </div>
 
 
