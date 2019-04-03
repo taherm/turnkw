@@ -11,9 +11,9 @@ class ContactController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|alpha',
-            'email' => 'required|email',
-            'subject' => 'required',
-            'message' => 'required',
+            'email' => 'required|email|min:10|max:30',
+            'subject' => 'required|min:5|max:50',
+            'message' => 'required|min:10|max:100',
 
         ]);
 
@@ -23,7 +23,6 @@ class ContactController extends Controller
             'subject' => request('subject'),
             'message' => request('message')
         ];
-        //dd($data['name']);
 
         try {
             \Mail::to('info@tasaweeq.com')->send(new contact($data));
