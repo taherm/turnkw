@@ -7,8 +7,15 @@ use App\Mail\contact;
 
 class ContactController extends Controller
 {
-    public function send()
+    public function send(Request $request)
     {
+        $validatedData = $request->validate([
+            'name' => 'required|alpha',
+            'email' => 'required|email',
+            'subject' => 'required',
+            'message' => 'required',
+
+        ]);
 
         $data = [
             'email' => request('email'),
@@ -19,11 +26,10 @@ class ContactController extends Controller
         //dd($data['name']);
 
         try {
-            \Mail::to('mukadam.taher@gmail.com')->send(new contact($data));
+            \Mail::to('info@tasaweeq.com')->send(new contact($data));
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
-        return redirect('/
-');
+        return redirect('/');
     }
 }

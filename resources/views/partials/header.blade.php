@@ -104,13 +104,13 @@
 										--}}
 
 
-                                        <li class="">
+                                        {{-- <li class="">
                                             <a href="#" target="_blank" title="Search">
                                                 <i class="fa fa-search"></i>
                                             </a>
 
 
-                                        </li>
+                                        </li>      --}}
                                     </ul>
                                 </nav>
                             </div>

@@ -154,6 +154,30 @@ class ServicesTableSeeder extends Seeder
                 'created_at' => '2018-06-08 18:59:46',
                 'updated_at' => '2018-06-08 18:59:46',
             ),
+            7 => 
+            array (
+                'menu_id' => 2,
+                'id' => 10,
+                'title_en' => 'Execution',
+                'title_ar' => 'إعدام',
+                'description_en' => '<p>Execution</p>',
+                'description_ar' => '<p>إعدام</p>',
+                'image' => 'e7892a4105d6f7fdfbe452ce72b0bf9d.jpg',
+                'created_at' => '2019-04-03 09:29:58',
+                'updated_at' => '2019-04-03 09:29:58',
+            ),
+            8 => 
+            array (
+                'menu_id' => 2,
+                'id' => 11,
+                'title_en' => 'Marketing Campaign',
+                'title_ar' => 'حملة تسويق',
+                'description_en' => '<p>Marketing Campaign</p>',
+                'description_ar' => '<pre id="tw-target-text" class="tw-data-text tw-ta tw-text-medium" dir="rtl" style="text-align: right; height: 36px;" data-placeholder="Translation" data-fulltext=""><span lang="ar" tabindex="0">حملة تسويق</span></pre>',
+                'image' => '8759e4823acdd9d02e9d59c737aabf9c.jpg',
+                'created_at' => '2019-04-03 09:31:13',
+                'updated_at' => '2019-04-03 09:31:13',
+            ),
         ));
         
         

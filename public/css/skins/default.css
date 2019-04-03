@@ -400,9 +400,9 @@ html .badge-light {
 }
 
 html .btn-primary {
-  background-color: #ffffff;
-  border-color: #ffffff #ffffff #006699;
-  color: #ffffff;
+  background-color: #71D1D2;
+  border-color: #71D1D2 #71D1D2 #71D1D2;
+  color: #71D1D2;
 }
 
 html .btn-primary:hover,
