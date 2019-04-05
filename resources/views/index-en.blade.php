@@ -1,25 +1,72 @@
 @extends('layouts.master-en')
 @section('content')
 
-<div class="container">
+
+{{-- <div class="container">
 
 
-
-    <div class="row align-items-center">
+ <div class="row align-items-center">
         <div class="col-lg-12">
             <img src="{{asset('uploads/home.jpeg')}}" width="100%" height="auto">
-        </div>
-
-    </div>
+</div>
 
 </div>
+
+</div>
+--}}
+
+
+
+<div class="container">
+    {{-- <div class="row text-center">
+        <div class="col">
+            <img src="{{asset('uploads/logo.png')}}" width="100%" height="auto">
+</div>
+</div>--}}
+<div class="row text-center mt-5">
+    <div class="owl-carousel owl-theme" data-plugin-options="{'items': 6, 'autoplay': true, 'autoplayTimeout': 3000}">
+        <div>
+            <img class="img-fluid" src="{{asset('img/logos/logo-1.png')}}" alt="">
+        </div>
+        <div>
+            <img class="img-fluid" src="{{asset('img/logos/logo-2.png')}}" alt="">
+        </div>
+        <div>
+            <img class="img-fluid" src="{{asset('img/logos/logo-3.png')}}" alt="">
+        </div>
+        <div>
+            <img class="img-fluid" src="{{asset('img/logos/logo-4.png')}}" alt="">
+        </div>
+        <div>
+            <img class="img-fluid" src="{{asset('img/logos/logo-5.png')}}" alt="">
+        </div>
+        <div>
+            <img class="img-fluid" src="{{asset('img/logos/logo-6.png')}}" alt="">
+        </div>
+        <div>
+            <img class="img-fluid" src="{{asset('img/logos/logo-7.png')}}" alt="">
+        </div>
+        <div>
+            <img class="img-fluid" src="{{asset('img/logos/logo-8.png')}}" alt="">
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
 <br>
 <div class="container">
 
     <div class="row align-items-center">
         <div class="col-lg-12">
             <p>
-                The majority of traditional marketers create their yearly marketing campaigns by advertising on social media networks, television, and other outlets. They then design a number of print media packages and assign a budget. At the end of every year, the process is repeated where they may add an extra 10% to their new budgets in an attempt to increase the volume of their campaigns. However, the end result is always the same.. <a href="/about" style="color:#0099e6 !important">More</a>
+                The majority of traditional marketers create their yearly marketing campaigns by advertising on social
+                media networks, television, and other outlets. They then design a number of print media packages and
+                assign a budget. At the end of every year, the process is repeated where they may add an extra 10% to
+                their new budgets in an attempt to increase the volume of their campaigns. However, the end result is
+                always the same.. <a href="/about" style="color:#0099e6 !important">More</a>
             </p>
         </div>
 
@@ -123,4 +170,4 @@
 
 
 
-@endsection 
+@endsection

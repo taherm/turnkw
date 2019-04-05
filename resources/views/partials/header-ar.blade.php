@@ -6,7 +6,7 @@
                     <div class="header-row">
                         <div class="header-logo">
                             <a href="/">
-                                <img alt="Porto" width="120" height="35" data-sticky-width="82" data-sticky-height="40" data-sticky-top="33" src="{{asset('uploads/logo.png')}}">
+                                <img alt="Tasaweeq" width="120" height="35" data-sticky-width="82" data-sticky-height="40" data-sticky-top="33" src="{{asset('uploads/logo.png')}}">
                             </a>
                         </div>
                     </div>
@@ -97,6 +97,14 @@
                                                 إتصل بنا </a>
 
                                         </li>
+
+
+                                        <li class="">
+                                            <a class="nav-link" href="/careers-ar">
+                                                وظائف </a>
+
+                                        </li>
+
                                         {{-- <li class="">
                                             <a class="nav-link" href="/">
                                                 English
@@ -125,4 +133,4 @@
             </div>
         </div>
     </div>
-</header> 
+</header>

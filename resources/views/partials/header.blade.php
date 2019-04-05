@@ -87,6 +87,11 @@
                                                 Our Clients
                                             </a>
                                         </li>
+                                        <li class="">
+                                            <a class="nav-link" href="/careers">
+                                                Careers
+                                            </a>
+                                        </li>
 
                                         <li class="">
                                             <a class="nav-link" href="/contact">
@@ -124,4 +129,4 @@
             </div>
         </div>
     </div>
-</header> 
+</header>
