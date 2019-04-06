@@ -12,13 +12,13 @@ class ServicesTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('services')->delete();
-        
-        \DB::table('services')->insert(array (
-            0 => 
-            array (
+
+        \DB::table('services')->insert(array(
+            0 =>
+            array(
                 'menu_id' => 2,
                 'id' => 2,
                 'title_en' => 'Marketing Plan',
@@ -42,20 +42,20 @@ class ServicesTableSeeder extends Seeder
                 'created_at' => '2018-06-08 18:41:45',
                 'updated_at' => '2018-06-09 09:38:06',
             ),
-            1 => 
-            array (
+            1 =>
+            array(
                 'menu_id' => 2,
                 'id' => 3,
-                'title_en' => 'Where do you want to go',
-                'title_ar' => 'إلى أين تريد الوصول؟',
+                'title_en' => 'Marketing Strategy',
+                'title_ar' => 'استراتيجية التسويق',
                 'description_en' => '<p>Our team will prepare a strategy hand in hand with your organization to specify an end goal. It is a comprehensive three-year strategic plan which focuses on highlighting your organization&rsquo;s performance through a number of marketing aspects including: development, product offerings and services, pricing, quality control, and marketing identity. These marketing aspects play a vital role in realizing market share growth, brand positioning and consumer loyalty to your organization.</p>',
                 'description_ar' => '<p>يقوم الفريق بإعداد الاستراتيجية بالتعاون مع العميل لتحديد نقطة الوصول، وهي استراتيجية شاملة لمدة ثلاثة سنوات ، تركز الاستراتيجية على تمييز مؤسسة العميل في إحدى الجوانب التسويقية كتطوير أو تقديم المنتجات / خدمة العملاء / التسعير والجودة والهوية التسويقية والتي تساهم في تحقيق النمو في الحصة التسويقية وتحقيق ولاء المستهلكين للمؤسسة ومكانة العلامة التجارية.</p>',
                 'image' => 'ef5599d77411e62e2f96b00dba716339.jpg',
                 'created_at' => '2018-06-08 18:43:40',
                 'updated_at' => '2018-06-09 09:36:27',
             ),
-            2 => 
-            array (
+            2 =>
+            array(
                 'menu_id' => 2,
                 'id' => 4,
                 'title_en' => 'Marketing Research',
@@ -67,8 +67,8 @@ class ServicesTableSeeder extends Seeder
                 'created_at' => '2018-06-08 18:53:04',
                 'updated_at' => '2018-06-08 18:53:04',
             ),
-            3 => 
-            array (
+            3 =>
+            array(
                 'menu_id' => 2,
                 'id' => 5,
                 'title_en' => 'Marketing Consultation',
@@ -79,8 +79,8 @@ class ServicesTableSeeder extends Seeder
                 'created_at' => '2018-06-08 18:54:34',
                 'updated_at' => '2018-06-08 18:54:34',
             ),
-            4 => 
-            array (
+            4 =>
+            array(
                 'menu_id' => 2,
                 'id' => 6,
                 'title_en' => 'Training and Development',
@@ -91,12 +91,12 @@ class ServicesTableSeeder extends Seeder
                 'created_at' => '2018-06-08 18:56:42',
                 'updated_at' => '2018-06-08 18:56:42',
             ),
-            5 => 
-            array (
+            5 =>
+            array(
                 'menu_id' => 2,
                 'id' => 7,
-                'title_en' => 'Building Marketing Identity',
-                'title_ar' => 'بناء الهوية التسويقية',
+                'title_en' => 'Branding',
+                'title_ar' => 'العلامات التجارية',
                 'description_en' => '<p>Our expert team works to develop and establish a visual marketing identity that is appropriate to your organization. We do so after we diligently gather and analyze the inner workings of your organization. We proudly offer the following innovative services:</p>
 <ul>
 <li>Register your organization&rsquo;s name</li>
@@ -123,8 +123,8 @@ class ServicesTableSeeder extends Seeder
                 'created_at' => '2018-06-08 18:58:14',
                 'updated_at' => '2018-06-08 18:58:14',
             ),
-            6 => 
-            array (
+            6 =>
+            array(
                 'menu_id' => 2,
                 'id' => 8,
                 'title_en' => 'Digital Marketing',
@@ -137,7 +137,7 @@ class ServicesTableSeeder extends Seeder
 <li>Step Four: We present your organization with a project report. This may include a work report or strategic work plan prepared by our expert team. We then offer our services to oversee that it properly executed and goals are attained.</li>
 <li>Step Five:We measure your key performance indicators with the goal of evaluating results and their effect on work activities.</li>
 </ul>',
-            'description_ar' => '<p>تقدم تساويق خدمة إدارة وتنظيم الحملات التسويقية ( الإعلانية &ndash; الإعلامية) ، وتنقسم إلى:</p>
+                'description_ar' => '<p>تقدم تساويق خدمة إدارة وتنظيم الحملات التسويقية ( الإعلانية &ndash; الإعلامية) ، وتنقسم إلى:</p>
 <ul>
 <li>الحملة الإلكترونية وتشمل ( شبكة جوجل &ndash; شبكات التواصل الاجتماعية &ndash; المواقع الإلكترونية)</li>
 <li>الحملة التقليدية وتشمل ( المقابلات الصحفية &ndash; الإعلانات الخارجية والطرق السريعة &ndash; المطبوعات &ndash; المقابلات والإعلانات الإذاعية)</li>
@@ -154,8 +154,8 @@ class ServicesTableSeeder extends Seeder
                 'created_at' => '2018-06-08 18:59:46',
                 'updated_at' => '2018-06-08 18:59:46',
             ),
-            7 => 
-            array (
+            7 =>
+            array(
                 'menu_id' => 2,
                 'id' => 10,
                 'title_en' => 'Execution',
@@ -166,8 +166,8 @@ class ServicesTableSeeder extends Seeder
                 'created_at' => '2019-04-03 09:29:58',
                 'updated_at' => '2019-04-03 09:29:58',
             ),
-            8 => 
-            array (
+            8 =>
+            array(
                 'menu_id' => 2,
                 'id' => 11,
                 'title_en' => 'Marketing Campaign',
@@ -179,7 +179,5 @@ class ServicesTableSeeder extends Seeder
                 'updated_at' => '2019-04-03 09:31:13',
             ),
         ));
-        
-        
     }
 }

@@ -6,7 +6,7 @@
                     <div class="header-row">
                         <div class="header-logo">
                             <a href="/">
-                                <img alt="Tasaweeq" width="120" height="35" data-sticky-width="120" data-sticky-height="35" data-sticky-top="33" src="{{asset('uploads/logo.png')}}">
+                                <img alt="Tasaweeq" width="120" height="35" data-sticky-width="120" data-sticky-height="35" data-sticky-top="33" src="<?php echo e(asset('uploads/logo.png')); ?>">
                             </a>
                         </div>
                     </div>
@@ -49,33 +49,35 @@
                                             </a>
                                         </li>
 
-                                        @foreach($cat as $item)
-                                        @if($item->services->count())
+                                        <?php $__currentLoopData = $cat; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <?php if($item->services->count()): ?>
 
                                         <li class="dropdown">
                                             <a class="dropdown-item dropdown-toggle" onclick="return false" style="cursor:default" href="/">
-                                                {{$item->title_en}}
+                                                <?php echo e($item->title_en); ?>
+
                                             </a>
                                             <ul class="dropdown-menu">
-                                                @foreach($item->services as $submenu)
+                                                <?php $__currentLoopData = $item->services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $submenu): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <li>
-                                                    <a class="dropdown-item" href="{{url('services_en/'.$submenu->id)}}">{{$submenu->title_en}}</a>
+                                                    <a class="dropdown-item" href="<?php echo e(url('services_en/'.$submenu->id)); ?>"><?php echo e($submenu->title_en); ?></a>
                                                 </li>
-                                                @endforeach
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             </ul>
 
                                         </li>
 
-                                        @else
+                                        <?php else: ?>
                                         <li class="">
                                             <a class="nav-link" href="/">
-                                                {{$item->title_en}}
+                                                <?php echo e($item->title_en); ?>
+
                                             </a>
 
                                         </li>
 
-                                        @endif
-                                        @endforeach
+                                        <?php endif; ?>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                                         <li class="">
                                             <a class="nav-link" href="/workspace">
@@ -100,22 +102,10 @@
 
                                         </li>
 
-                                        {{-- <li class="">
-                                            <a class="nav-link" href="/blog">
-                                                Blog
-                                            </a>
-
-                                        </li>
-										--}}
+                                        
 
 
-                                        {{-- <li class="">
-                                            <a href="#" target="_blank" title="Search">
-                                                <i class="fa fa-search"></i>
-                                            </a>
-
-
-                                        </li>      --}}
+                                        
                                     </ul>
                                 </nav>
                             </div>
