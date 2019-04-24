@@ -105,7 +105,7 @@ Route::get('/market-research-ar', function () {
     return view('ar.market-research');
 });
 
-Route::post('/contact-mail', 'ContactController@send');
+Route::post('/send-mail', 'ContactController@send');
 Route::post('/careers-mail', 'ContactController@careers');
 
 

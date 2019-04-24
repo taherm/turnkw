@@ -85,7 +85,7 @@
 
     <div class="row align-items-center">
         <div class="col-lg-12">
-            <form action="/contact-mail" method="POST">
+            <form action="/send-mail" method="POST">
                 <?php echo e(csrf_field()); ?>
 
                 <div class="form-row">

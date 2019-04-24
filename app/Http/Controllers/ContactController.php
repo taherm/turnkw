@@ -19,19 +19,23 @@ class ContactController extends Controller
 
         ]);
 
-        $data = [
-            'email' => request('email'),
-            'name' => request('name'),
-            'subject' => request('subject'),
-            'message' => request('message')
-        ];
+        if ($request->name == "MartinPem") {
+            return redirect('/');
+        } else {
+            $data = [
+                'email' => request('email'),
+                'name' => request('name'),
+                'subject' => request('subject'),
+                'message' => request('message')
+            ];
 
-        try {
-            \Mail::to('info@tasaweeq.com')->send(new contact($data));
-        } catch (\Exception $e) {
-            dd($e->getMessage());
+            try {
+                \Mail::to('info@tasaweeq.com')->send(new contact($data));
+            } catch (\Exception $e) {
+                dd($e->getMessage());
+            }
+            return redirect('/');
         }
-        return redirect('/');
     }
 
 
