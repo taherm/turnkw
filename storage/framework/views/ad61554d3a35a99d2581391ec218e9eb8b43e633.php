@@ -23,6 +23,10 @@
                                         <i class="fa fa-twitter fa-2x"></i>
                                     </a></li>
                                 <li>
+                                <li><a href="https://www.linkedin.com/company/tasaweeq" target="_blank" title="Linkedin">
+                                        <i class="fa fa-linkedin fa-2x"></i>
+                                    </a></li>
+                                <li>
                                     <a class="nav-link" href="/">
                                         English
                                     </a>
@@ -83,7 +87,7 @@
                                                 نطاق العمل </a>
                                         </li>
                                         <li class="">
-                                            <a class="nav-link" href="/clients">
+                                            <a class="nav-link" href="/clients-ar">
                                                 عملاءنا </a>
                                         </li>
 

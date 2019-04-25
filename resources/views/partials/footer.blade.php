@@ -3,10 +3,11 @@
         <div class="container">
             <div class="row">
 
-                {{-- <div class="col-lg-7">
-								<p>Copyright tasaweeq.com - Developed by <a href="http://ideasowners.net">ideasowners</a></p>
-							</div> --}}
-                <div class="col-lg-12">
+                <div class="col-md-6">
+                    <p style="font-size:18px;color:white">Change Makers</p>
+                </div>
+                <div class="col-md-6">
+
                     <nav id="sub-menu">
                         <ul>
                             <li><a href="http://instagram.com/tsaweeq" target="_blank" title="Instagram">
@@ -16,6 +17,9 @@
                             <li><a href="http://twitter.com/tasaweeq" target="_blank" title="Linkedin">
                                     <i class="fa fa-twitter fa-2x"></i>
                                 </a></li>
+                            <li><a href="https://www.linkedin.com/company/tasaweeq" target="_blank" title="Linkedin">
+                                    <i class="fa fa-linkedin fa-2x"></i>
+                                </a></li>
 
                         </ul>
                     </nav>
@@ -23,4 +27,4 @@
             </div>
         </div>
     </div>
-</footer> 
+</footer>

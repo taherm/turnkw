@@ -41,7 +41,7 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col">
-                        <label>Position</label>
+                        <label>Position *</label>
                         <input type="text" value="" data-msg-required="Please enter the Postion applying for." maxlength="100" class="form-control" name="position" id="position" required>
                     </div>
                 </div>

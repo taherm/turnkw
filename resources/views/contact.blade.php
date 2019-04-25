@@ -18,14 +18,14 @@
         <div class="col-lg-12">
             <h1 class="text-center">Contact Us</h1>
             <p>
-                <ul>
-                    <li> Telephone:+965 2291 33 67</li>
+                <ul style="list-style-type:none;">
+                    <li> <i class="fa fa-phone"></i> +965 2291 33 67</li>
 
-                    <li>Address:</li>
 
-                    <li>State of Kuwait – East – Plot 6 – Mubarak Al – Kabeer Street – Tower Aldarawza 51 – Floor 7</li>
 
-                    <li>E-mail: info@tasaweeq.com </li>
+                    <li><i class="fa fa-map-marker"> </i> State of Kuwait – East – Plot 6 – Mubarak Al – Kabeer Street – Tower Aldarawza 51 – Floor 7</li>
+
+                    <li><i class="fa fa-envelope"> </i> info@tasaweeq.com </li>
                 </ul>
             </p>
         </div>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col">
-                        <label>Subject</label>
+                        <label>Subject *</label>
                         <input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="subject" id="subject" required>
                     </div>
                 </div>

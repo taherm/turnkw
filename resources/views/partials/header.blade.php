@@ -22,6 +22,9 @@
                                 <li><a href="http://twitter.com/tasaweeq" target="_blank" title="Linkedin">
                                         <i class="fa fa-twitter fa-2x"></i>
                                     </a></li>
+                                <li><a href="https://www.linkedin.com/company/tasaweeq" target="_blank" title="Linkedin">
+                                        <i class="fa fa-linkedin fa-2x"></i>
+                                    </a></li>
                                 <li>
                                     <a class="nav-link" href="/home-ar">
                                         <p style="font-size:18px"> ع

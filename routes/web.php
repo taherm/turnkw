@@ -93,6 +93,10 @@ Route::get('/workspace-ar', function () {
     return view('ar.workspace');
 });
 
+Route::get('/clients-ar', function () {
+    return view('ar.clients');
+});
+
 Route::get('/about-ar', function () {
     return view('ar.about');
 });

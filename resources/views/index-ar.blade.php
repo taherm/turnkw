@@ -103,25 +103,25 @@
                 {{ csrf_field() }}
                 <div class="form-row">
                     <div class="form-group col">
-                        <label>الاسم*</label>
+                        <label>الاسم *</label>
                         <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col">
-                        <label>البريد الإلكتروني</label>
+                        <label>البريد الإلكتروني *</label>
                         <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col">
-                        <label>الموضوع</label>
+                        <label>الموضوع *</label>
                         <input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="subject" id="subject" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col">
-                        <label>محتوى الموضوع</label>
+                        <label>محتوى الموضوع *</label>
                         <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message" required></textarea>
                     </div>
                 </div>

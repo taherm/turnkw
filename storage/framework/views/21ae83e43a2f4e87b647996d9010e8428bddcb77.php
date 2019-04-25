@@ -110,7 +110,7 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col">
-                        <label>Subject</label>
+                        <label>Subject *</label>
                         <input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="subject" id="subject" required>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-@extends('layouts.master-en')
+@extends('layouts.master-ar')
 @section('content')
 
 
