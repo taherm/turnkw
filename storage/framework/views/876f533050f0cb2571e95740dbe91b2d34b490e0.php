@@ -6,7 +6,7 @@
                     <div class="header-row">
                         <div class="header-logo">
                             <a href="/">
-                                <img alt="TurnKw" width="110" height="40" data-sticky-width="110" data-sticky-height="40" data-sticky-top="33" src="{{asset('uploads/circle-logo.jpg')}}">
+                                <img alt="TurnKw" width="110" height="40" data-sticky-width="110" data-sticky-height="40" data-sticky-top="33" src="<?php echo e(asset('uploads/circle-logo.jpg')); ?>">
                             </a>
                         </div>
                     </div>
@@ -77,22 +77,10 @@
 
                                         </li>
 
-                                        {{-- <li class="">
-                                            <a class="nav-link" href="/blog">
-                                                Blog
-                                            </a>
-
-                                        </li>
-										--}}
+                                        
 
 
-                                        {{-- <li class="">
-                                            <a href="#" target="_blank" title="Search">
-                                                <i class="fa fa-search"></i>
-                                            </a>
-
-
-                                        </li>      --}}
+                                        
                                     </ul>
                                 </nav>
                             </div>

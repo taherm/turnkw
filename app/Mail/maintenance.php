@@ -8,7 +8,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use File;
 
-class careers extends Mailable
+class maintenance extends Mailable
 {
     use Queueable, SerializesModels;
     public $data;
@@ -30,9 +30,9 @@ class careers extends Mailable
      */
     public function build()
     {
-        $this->replyTo($this->data['email']);
-        $this->fileContents = base64_encode(File::get($this->data['cv_file']));
-        return $this->view('emails.careers')->attachData(base64_decode($this->fileContents), $this->data['name'] . '_cv.pdf');
+        //$this->replyTo($this->data['email']);
+        $this->fileContents = base64_encode(File::get($this->data['image']));
+        return $this->view('emails.maintenance')->attachData(base64_decode($this->fileContents), $this->data['type'] . '.jpg');
 
         //   return $this->view('emails.careers')->attachData($this->data['cv_file'], 'cv.pdf', [
         //       'mime' => 'application/pdf',

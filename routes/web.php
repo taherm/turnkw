@@ -27,8 +27,8 @@ Route::get('/home-ar', function () {
     return view('index-ar', compact('ser'));
 });
 
-Route::get('/workspace', function () {
-    return view('workspace');
+Route::get('/maintenance', function () {
+    return view('maintenance');
 });
 
 Route::get('/clients', function () {
@@ -41,6 +41,11 @@ Route::get('/careers', function () {
 
 Route::get('/about', function () {
     return view('about');
+});
+
+
+Route::get('/maintenance_form', function () {
+    return view('maintenance_form');
 });
 
 
@@ -110,7 +115,7 @@ Route::get('/market-research-ar', function () {
 });
 
 Route::post('/send-mail', 'ContactController@send');
-Route::post('/careers-mail', 'ContactController@careers');
+Route::post('/maintenance-mail', 'ContactController@maintenance');
 
 
 Route::get('/where-to-go-ar', function () {

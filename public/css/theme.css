@@ -42,7 +42,7 @@ li {
 #header .header-body {
 	display: flex;
 	flex-direction: column;
-	background: #71D1D2;
+	background: #666666;
 	-webkit-transition: min-height 0.3s ease;
 	-moz-transition: min-height 0.3s ease;
 	transition: min-height 0.3s ease;
@@ -3648,9 +3648,9 @@ strong {
 }
 
 #footer .footer-copyright {
-	background: #71D1D2;
-	border-top: 4px solid #71D1D2;
-	margin-top: 40px;
+	background: #666666;
+	border-top: 4px solid #666666;
+
 	padding: 30px 0 10px;
 }
 

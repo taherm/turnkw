@@ -1,12 +1,11 @@
-@extends('layouts.master-en')
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 
 <div class="container">
 
 	<div class="row align-items-center">
 		<div class="col-lg-12">
-			{{-- <img src="{{asset('uploads/about/1.jpg')}}" width="100%" height="auto"> --}}
+			
 			<h1 class="text-center">About Turn</h1>
 			<p>
 				Turn Design & Build was Established in 2007 by Eng. Mohamad G. Moustapha (Abo Ghassan). The idea was
@@ -31,4 +30,5 @@
 
 	</div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master-en', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,51 +1,17 @@
-@extends('layouts.master-en')
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 
-{{-- <div class="container">
 
-
- <div class="row align-items-center">
-        <div class="col-lg-12">
-            <img src="{{asset('uploads/home.jpeg')}}" width="100%" height="auto">
-</div>
-
-</div>
-
-</div>
---}}
 
 
 
 <div class="container">
     <div class="row text-center">
         <div class="col">
-            <img src="{{asset('uploads/1.jpg')}}" width="100%" height="auto">
+            <img src="<?php echo e(asset('uploads/1.jpg')); ?>" width="100%" height="auto">
         </div>
     </div>
-    {{--<div class="row text-center mt-5">
-    <div class="owl-carousel owl-theme" data-plugin-options="{'items': 6, 'autoplay': true, 'autoplayTimeout': 3000}">
-        <div>
-            <img class="img-fluid" src="{{asset('img/logos/logo-1.png')}}" alt="">
-</div>
-<div>
-    <img class="img-fluid" src="{{asset('img/logos/logo-2.png')}}" alt="">
-</div>
-<div>
-    <img class="img-fluid" src="{{asset('img/logos/logo-3.png')}}" alt="">
-</div>
-<div>
-    <img class="img-fluid" src="{{asset('img/logos/logo-4.png')}}" alt="">
-</div>
-<div>
-    <img class="img-fluid" src="{{asset('img/logos/logo-5.png')}}" alt="">
-</div>
-<div>
-    <img class="img-fluid" src="{{asset('img/logos/logo-6.png')}}" alt="">
-</div>
-
-</div>
-</div>--}}
+    
 </div>
 
 
@@ -81,15 +47,15 @@
 
     <div class="row portfolio-list sort-destination" data-sort-id="portfolio">
 
-        @foreach($ser as $s)
+        <?php $__currentLoopData = $ser; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $s): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <div class="col-lg-4 isotope-item websites" id="websites">
             <div class="portfolio-item">
-                <a href="{{ url('services_en/'.$s->id) }}">
+                <a href="<?php echo e(url('services_en/'.$s->id)); ?>">
                     <span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
                         <span class="thumb-info-wrapper">
-                            <img src="{{asset('uploads/'.$s->image)}}" class="img-fluid" alt="">
+                            <img src="<?php echo e(asset('uploads/'.$s->image)); ?>" class="img-fluid" alt="">
                             <span class="thumb-info-title">
-                                <span class="thumb-info-inner text-1 line-height-xs pt-1">{{$s->title_en}}</span>
+                                <span class="thumb-info-inner text-1 line-height-xs pt-1"><?php echo e($s->title_en); ?></span>
 
                             </span>
                         </span>
@@ -97,7 +63,7 @@
                 </a>
             </div>
         </div>
-        @endforeach
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
 
@@ -116,7 +82,7 @@
             <div class="col-md-4">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-4">
-                        <img class="img-fluid mb-4" src="{{asset('uploads/circle-logo.jpg')}}" alt="">
+                        <img class="img-fluid mb-4" src="<?php echo e(asset('uploads/circle-logo.jpg')); ?>" alt="">
                     </div>
                     <div class="col-lg-8">
                         <h4 class="mb-1">Why TURN Design & Build</h4>
@@ -129,7 +95,7 @@
             <div class="col-md-4">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-4">
-                        <img class="img-fluid mb-4" src="{{asset('uploads/circle-logo.jpg')}}" alt="">
+                        <img class="img-fluid mb-4" src="<?php echo e(asset('uploads/circle-logo.jpg')); ?>" alt="">
                     </div>
                     <div class="col-lg-8">
                         <h4 class="mb-1">Vision</h4>
@@ -143,7 +109,7 @@
             <div class="col-md-4">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-4">
-                        <img class="img-fluid mb-4" src="{{asset('uploads/circle-logo.jpg')}}" alt="">
+                        <img class="img-fluid mb-4" src="<?php echo e(asset('uploads/circle-logo.jpg')); ?>" alt="">
                     </div>
                     <div class="col-lg-8">
                         <h4 class="mb-1">Mission</h4>
@@ -155,7 +121,7 @@
             <div class="col-md-4">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-4">
-                        <img class="img-fluid mb-4" src="{{asset('uploads/circle-logo.jpg')}}" alt="">
+                        <img class="img-fluid mb-4" src="<?php echo e(asset('uploads/circle-logo.jpg')); ?>" alt="">
                     </div>
                     <div class="col-lg-8">
                         <h4 class="mb-1">Our Values</h4>
@@ -284,4 +250,5 @@
 
 
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master-en', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

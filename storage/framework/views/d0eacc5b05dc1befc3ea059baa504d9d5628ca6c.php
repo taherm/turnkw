@@ -3,9 +3,7 @@
         <div class="container">
             <div class="row">
 
-                {{-- <div class="col-md-6">
-                    <p style="font-size:18px;color:white">Change Makers</p>
-                </div>--}}
+                
                 <div class="col-md-12">
 
                     <nav id="sub-menu">
