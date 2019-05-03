@@ -1,20 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>TurnKw Maintenance Email</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
-    <h1>TurnKw Maintenance Mail</h1>
-    <p>Type: {{$data['type']}}</p>
-    <p>Location: {{$data['location']}}</p>
-    <p>Branch Manager Name: {{$data['branch_name']}}</p>
-    <p>Branch Manager Number: {{$data['branch_no']}}</p>
-    <p>Working Hours: {{$data['working_hours']}}</p>
+<body style="margin:0; padding:10px 0 0 0;" bgcolor="#F8F8F8">
+    <table align="center" border="1" cellpadding="0" cellspacing="0" width="95%%">
+        <tr>
+            <td align="center">
+                <table align="center" border="1" cellpadding="0" cellspacing="0" width="600" style="border-collapse: separate; border-spacing: 2px 5px; box-shadow: 1px 0 1px 1px #B8B8B8;" bgcolor="#FFFFFF">
+                    <tr>
+                        <td align="center" style="padding: 5px 5px 5px 5px;">
+
+                            <img src="https://i.ibb.co/VBP84v2/logo.jpg" alt=" Logo" style="width:186px;border:0;" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center">
+                            <!-- Initial relevant banner image goes here under src-->
+                            <p> {{Carbon\Carbon::now()->toFormattedDateString()}} </p>
+                        </td>
+                    </tr>
+                    <table border="1">
+                        <tr>
+                            <th>Type</th>
+                            <th>Location</th>
+                            <th>Branch Manager Name</th>
+                            <th>Branch Manager Number</th>
+                            <th>Working Hours</th>
+
+                        </tr>
+                        <tr>
+                            <td align="center">{{$data['type']}}</td>
+                            <td align="center">{{$data['location']}}</td>
+                            <td align="center">{{$data['branch_name']}}</td>
+                            <td align="center">{{$data['branch_no']}}</td>
+                            <td align="center">{{$data['working_hours']}}</td>
+
+                        </tr>
+
+                    </table>
+                </table>
+            </td>
+        </tr>
+    </table>
 </body>
 
 </html>

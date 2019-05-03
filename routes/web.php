@@ -31,8 +31,8 @@ Route::get('/maintenance', function () {
     return view('maintenance');
 });
 
-Route::get('/clients', function () {
-    return view('clients');
+Route::get('/portfolio', function () {
+    return view('portfolio');
 });
 
 Route::get('/careers', function () {
@@ -116,6 +116,7 @@ Route::get('/market-research-ar', function () {
 
 Route::post('/send-mail', 'ContactController@send');
 Route::post('/maintenance-mail', 'ContactController@maintenance');
+Route::post('/careers-mail', 'ContactController@careers');
 
 
 Route::get('/where-to-go-ar', function () {
@@ -136,7 +137,9 @@ Route::get('/branding-ar', function () {
 Route::get('/training-ar', function () {
     return view('ar.training');
 });
-
+Route::get('/test', function () {
+    return view('layouts.master-email');
+});
 
 Route::get('/consulting-ar', function () {
     return view('ar.consulting');

@@ -1,5 +1,4 @@
-@extends('layouts.master-en')
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 
 <br>
@@ -26,7 +25,8 @@
     <div class="row align-items-center">
         <div class="col-lg-12">
             <form action="/careers-mail" method="POST" enctype="multipart/form-data">
-                {{ csrf_field() }}
+                <?php echo e(csrf_field()); ?>
+
                 <div class="form-row">
                     <div class="form-group col">
                         <label>Your name *</label>
@@ -69,16 +69,16 @@
 
     <div class="row">
         <div class="col-md-4">
-            @if ($errors->any())
+            <?php if($errors->any()): ?>
             <div class="alert alert-danger">
                 <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
+                    <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <li><?php echo e($error); ?></li>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </ul>
             </div>
 
-            @endif
+            <?php endif; ?>
         </div>
     </div>
 
@@ -86,4 +86,5 @@
 
 
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master-en', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -912,15 +912,15 @@ html.boxed .nav-secondary.sticky-active {
 }
 
 .btn-info {
-	background-color: #17a2b8;
-	border-color: #17a2b8 #17a2b8 #117a8b;
+	background-color: #666666;
+	border-color: #666666 #666666 #666666;
 	color: #FFF;
 }
 
 .btn-info:hover,
 .btn-info.hover {
-	background-color: #1bc0da;
-	border-color: #1fc8e3 #1fc8e3 #17a2b8;
+	background-color: #666666;
+	border-color: #666666 #666666 #666666;
 	color: #FFF;
 }
 

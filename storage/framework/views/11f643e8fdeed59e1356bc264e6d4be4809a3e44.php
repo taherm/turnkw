@@ -50,7 +50,7 @@
 
                 <div class="form-row">
                     <div class="form-group col">
-                        <input type="submit" style="color:white !important" value="Send" class="btn btn-primary btn-lg" data-loading-text="Loading...">
+                        <input type="submit" style="color:white !important;background:#666666" value="Send" class="btn btn-lg" data-loading-text="Loading...">
                     </div>
                 </div>
             </form>

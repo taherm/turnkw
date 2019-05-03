@@ -215,7 +215,7 @@
                 <h1 class="text-center">Let’s Hear you!</h1>
 
                 <h4 class="text-center">Ready to take it a step further? Let’s start talking about your project or idea and find out how we can help you.</h4>
-                <button type="button" class="btn btn-lg btn-block">Request a Free Quote</button>
+                <a href="/maintenance" class="btn btn-lg btn-warning btn-block">Request a Free Quote</a>
             </div>
             <div class="col-lg-4">
                 <div class="contact-details">

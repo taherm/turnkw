@@ -14,7 +14,7 @@
 
             </p>
 
-            <a href="/maintenance_form" class="btn btn-lg btn-info" role="button">Maintenance Form</a>
+            <a href="/maintenance_form" class="btn btn-lg" style="color:white !important;background:#666666" role="button">Maintenance Form</a>
         </div>
 
     </div>
