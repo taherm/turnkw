@@ -31,7 +31,7 @@ class ContactController extends Controller
             ];
 
             try {
-                \Mail::to('mgm@turnkw.com')->send(new contact($data));
+                \Mail::to('mukadam.taher@gmail.com')->send(new contact($data));
             } catch (\Exception $e) {
                 dd($e->getMessage());
             }
@@ -62,7 +62,7 @@ class ContactController extends Controller
         ];
 
         try {
-            \Mail::to('mgm@turnkw.com')->send(new maintenance($data));
+            \Mail::to('mukadam.taher@gmail.com')->send(new maintenance($data));
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
@@ -90,7 +90,7 @@ class ContactController extends Controller
         ];
 
         try {
-            \Mail::to('mgm@turnkw.com')->send(new careers($data));
+            \Mail::to('mukadam.taher@gmail.com')->send(new careers($data));
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
