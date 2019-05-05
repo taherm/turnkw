@@ -71,9 +71,9 @@ class ServicesTableSeeder extends Seeder
 </div>
 </div>
 </div>',
-                'image' => '72c9aab97c1cff229b3dfed8711c9dd6.jpg',
+                'image' => '0fb1e534797c656ab4c2092999ded837.jpg',
                 'created_at' => '2018-06-08 18:41:45',
-                'updated_at' => '2019-04-28 09:16:17',
+                'updated_at' => '2019-05-05 04:54:21',
             ),
             1 => 
             array (
@@ -129,9 +129,9 @@ class ServicesTableSeeder extends Seeder
 </div>
 </div>
 </div>',
-                'image' => 'd819e6a8ffd7df80609f5408f58c0afc.jpg',
+                'image' => '63c2599293fe8d01fbc881e2455dff26.jpg',
                 'created_at' => '2018-06-08 18:43:40',
-                'updated_at' => '2019-04-28 09:22:01',
+                'updated_at' => '2019-05-05 04:53:02',
             ),
             2 => 
             array (
@@ -187,9 +187,9 @@ class ServicesTableSeeder extends Seeder
 </div>
 </div>
 </div>',
-                'image' => '8d4091011415365d7a0e662d4b278454.jpg',
+                'image' => '08edf347c9139def26a833f919700509.jpg',
                 'created_at' => '2018-06-08 18:53:04',
-                'updated_at' => '2019-04-28 09:23:06',
+                'updated_at' => '2019-05-05 04:52:35',
             ),
         ));
         

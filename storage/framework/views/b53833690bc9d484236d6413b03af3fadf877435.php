@@ -11,8 +11,8 @@
 
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<?php echo e(asset('img/icon.ico')); ?>" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="<?php echo e(asset('img/apple-icon.ico')); ?>">
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="">
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">

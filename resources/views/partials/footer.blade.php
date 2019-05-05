@@ -8,7 +8,7 @@
                         <p style="font-size:18px;color:white">Developed by IdeasOwners</p>
                     </a>
                 </div>
-                <div class="col-md-6">
+                {{--<div class="col-md-6">
 
                     <nav id="sub-menu">
                         <ul>
@@ -25,7 +25,7 @@
 
                         </ul>
                     </nav>
-                </div>
+                </div>  --}}
             </div>
         </div>
     </div>

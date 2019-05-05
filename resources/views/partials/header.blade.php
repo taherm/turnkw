@@ -6,14 +6,14 @@
                     <div class="header-row">
                         <div class="header-logo">
                             <a href="/">
-                                <img alt="TurnKw" width="120" height="70" data-sticky-width="120" data-sticky-height="70" data-sticky-top="27" src="{{asset('uploads/logo.jpg')}}">
+                                <img alt="TurnKw" width="100" height="50" data-sticky-width="100" data-sticky-height="50" data-sticky-top="27" src="{{asset('uploads/logo.jpg')}}">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="header-column justify-content-end">
                     <div class="header-row pt-3">
-                        <nav class="header-nav-top">
+                        {{-- <nav class="header-nav-top">
                             <ul class="nav nav-pills">
                                 <li><a href="/" target="_blank" title="Instagram">
                                         <i class="fa fa-instagram fa-2x"></i>
@@ -32,8 +32,8 @@
                                     </a>
 
                                 </li>  --}}
-                            </ul>
-                        </nav>
+                        </ul>
+                        </nav>--}}
 
                     </div>
                     <div class="header-row">
