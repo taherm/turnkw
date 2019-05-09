@@ -6,7 +6,7 @@
                     <div class="header-row">
                         <div class="header-logo">
                             <a href="/">
-                                <img alt="TurnKw" width="95" height="68" data-sticky-width="95" data-sticky-height="68" data-sticky-top="27" src="{{asset('uploads/header_logo.png')}}">
+                                <img alt="TurnKw" width="120" height="90" data-sticky-width="120" data-sticky-height="90" data-sticky-top="27" src="{{asset('uploads/header_logo.png')}}">
                             </a>
                         </div>
                     </div>
@@ -25,13 +25,13 @@
                                 <li><a href="/" target="_blank" title="Linkedin">
                                         <i class="fa fa-linkedin fa-2x"></i>
                                     </a></li>
-                                {{-- <li>
+                                 <li>
                                     <a class="nav-link" href="/home-ar">
                                         <p style="font-size:18px"> ع
                                         </p>
                                     </a>
 
-                                </li>  --}}
+                                </li>  
                         </ul>
                         </nav>--}}
 
