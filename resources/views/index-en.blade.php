@@ -116,7 +116,7 @@
             <div class="col-md-4">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-4">
-                        <img class="img-fluid mb-4" src="{{asset('uploads/circle-logo.jpg')}}" alt="">
+                        <img class="img-fluid mb-4" src="{{asset('uploads/design.png')}}" alt="">
                     </div>
                     <div class="col-lg-8">
                         <h4 class="mb-1">Why TURN Design & Build</h4>
@@ -129,7 +129,7 @@
             <div class="col-md-4">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-4">
-                        <img class="img-fluid mb-4" src="{{asset('uploads/circle-logo.jpg')}}" alt="">
+                        <img class="img-fluid mb-4" src="{{asset('uploads/vision.png')}}" alt="">
                     </div>
                     <div class="col-lg-8">
                         <h4 class="mb-1">Vision</h4>
@@ -143,7 +143,7 @@
             <div class="col-md-4">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-4">
-                        <img class="img-fluid mb-4" src="{{asset('uploads/circle-logo.jpg')}}" alt="">
+                        <img class="img-fluid mb-4" src="{{asset('uploads/mission.png')}}" alt="">
                     </div>
                     <div class="col-lg-8">
                         <h4 class="mb-1">Mission</h4>
@@ -155,7 +155,7 @@
             <div class="col-md-4">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-4">
-                        <img class="img-fluid mb-4" src="{{asset('uploads/circle-logo.jpg')}}" alt="">
+                        <img class="img-fluid mb-4" src="{{asset('uploads/values.png')}}" alt="">
                     </div>
                     <div class="col-lg-8">
                         <h4 class="mb-1">Our Values</h4>

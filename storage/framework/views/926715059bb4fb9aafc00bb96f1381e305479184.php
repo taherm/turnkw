@@ -82,7 +82,7 @@
             <div class="col-md-4">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-4">
-                        <img class="img-fluid mb-4" src="<?php echo e(asset('uploads/circle-logo.jpg')); ?>" alt="">
+                        <img class="img-fluid mb-4" src="<?php echo e(asset('uploads/design.png')); ?>" alt="">
                     </div>
                     <div class="col-lg-8">
                         <h4 class="mb-1">Why TURN Design & Build</h4>
@@ -95,7 +95,7 @@
             <div class="col-md-4">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-4">
-                        <img class="img-fluid mb-4" src="<?php echo e(asset('uploads/circle-logo.jpg')); ?>" alt="">
+                        <img class="img-fluid mb-4" src="<?php echo e(asset('uploads/vision.png')); ?>" alt="">
                     </div>
                     <div class="col-lg-8">
                         <h4 class="mb-1">Vision</h4>
@@ -109,7 +109,7 @@
             <div class="col-md-4">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-4">
-                        <img class="img-fluid mb-4" src="<?php echo e(asset('uploads/circle-logo.jpg')); ?>" alt="">
+                        <img class="img-fluid mb-4" src="<?php echo e(asset('uploads/mission.png')); ?>" alt="">
                     </div>
                     <div class="col-lg-8">
                         <h4 class="mb-1">Mission</h4>
@@ -121,7 +121,7 @@
             <div class="col-md-4">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-4">
-                        <img class="img-fluid mb-4" src="<?php echo e(asset('uploads/circle-logo.jpg')); ?>" alt="">
+                        <img class="img-fluid mb-4" src="<?php echo e(asset('uploads/values.png')); ?>" alt="">
                     </div>
                     <div class="col-lg-8">
                         <h4 class="mb-1">Our Values</h4>
