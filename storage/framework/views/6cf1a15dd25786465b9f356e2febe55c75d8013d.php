@@ -22,10 +22,13 @@
                         <p><i class="fa fa-map-marker"></i> <strong>Address:</strong> Salmiya, Salem al Mubarak Street, Laila Gallery Complex, 1st Floor, Office 4</p>
                     </li>
                     <li>
+                        <p><i class="fa fa-phone"></i> <strong>Phone:</strong> (+965) 2205-4504</p>
+                    </li>
+                    <li>
                         <p><i class="fa fa-phone"></i> <strong>Phone:</strong> (+965) 2205-4505</p>
                     </li>
                     <li>
-                        <p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a style="color: grey;" href="mailto:mgm@turnkw.com">mgm@turnkw.com</a></p>
+                        <p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a style="color: grey;" href="mailto:info@turnkw.com">info@turnkw.com</a></p>
                     </li>
                 </ul>
             </p>

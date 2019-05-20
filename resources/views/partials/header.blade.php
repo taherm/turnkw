@@ -6,7 +6,7 @@
                     <div class="header-row">
                         <div class="header-logo">
                             <a href="/">
-                                <img alt="TurnKw" width="120" height="90" data-sticky-width="120" data-sticky-height="90" data-sticky-top="27" src="{{asset('uploads/header_logo.png')}}">
+                                <img alt="TurnKw" width="120" height="90" data-sticky-width="120" data-sticky-height="90" data-sticky-top="27" src="{{asset('uploads/logo.jpg')}}">
                             </a>
                         </div>
                     </div>

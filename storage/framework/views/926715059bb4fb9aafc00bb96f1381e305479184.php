@@ -215,7 +215,7 @@
                 <h1 class="text-center">Let’s Hear you!</h1>
 
                 <h4 class="text-center">Ready to take it a step further? Let’s start talking about your project or idea and find out how we can help you.</h4>
-                <a href="/maintenance" class="btn btn-lg btn-warning btn-block">Request a Free Quote</a>
+                <a href="/" class="btn btn-lg btn-warning btn-block">Request a Free Quote</a>
             </div>
             <div class="col-lg-4">
                 <div class="contact-details">
@@ -228,7 +228,7 @@
                             <p><i class="fa fa-phone"></i> <strong>Phone:</strong> (+965) 2205-4505</p>
                         </li>
                         <li>
-                            <p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mgm@turnkw.com">mgm@turnkw.com</a></p>
+                            <p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:info@turnkw.com">info@turnkw.com</a></p>
                         </li>
                     </ul>
                 </div>
