@@ -57,11 +57,11 @@
     <div class="row align-items-center">
         <div class="col-lg-12">
             <h1 class="text-center">Welcome to Turn</h1>
-            <h2 class="text-center">We hope that you will find inspiration here!</h2>
+            <h2 class="text-center">We hope that you'll find inspiration here!</h2>
             <h3 class="text-center">We provide clients with the highest possible level of service anywhere in the area.
             </h3>
             <h4 class="text-center">From concept through construction, to the finishing touches of each of your
-                projects, you can rely on the our team to deliver a personal environment tailored specifically for you.
+                projects, you can rely on our team to deliver a personal environment tailored specifically for you.
                 By interpreting an individual client’s style and needs, our licensed designers can successfully
                 incorporate function while following current fashion trends.</h4>
 
