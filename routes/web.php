@@ -1,6 +1,12 @@
 <?php
+
 use App\Service;
 use App\Menu;
+use App\About;
+use App\Home;
+use App\Portfolio;
+use App\Page;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,8 +24,10 @@ Auth::routes();
 
 Route::get('/', function () {
 
-    $ser = Service::all();
-    return view('index-en', compact('ser'));
+    $services = Service::all();
+    $pages = Page::all();
+    $home_page_text = Home::first()->description;
+    return view('index-en', compact('services', 'pages', 'home_page_text'));
 });
 
 Route::get('/home-ar', function () {
@@ -32,7 +40,8 @@ Route::get('/maintenance', function () {
 });
 
 Route::get('/portfolio', function () {
-    return view('portfolio');
+    $portfolio = Portfolio::all();
+    return view('portfolio', compact('portfolio'));
 });
 
 Route::get('/careers', function () {
@@ -40,7 +49,8 @@ Route::get('/careers', function () {
 });
 
 Route::get('/about', function () {
-    return view('about');
+    $about_us_text = About::first()->description;
+    return view('about', compact('about_us_text'));
 });
 
 
@@ -149,10 +159,13 @@ Route::get('/emarketing-ar', function () {
     return view('ar.emarketing');
 });
 
-
-Route::get('services_en/{id}', function ($id) {
+Route::get('pages/{id}', function ($id) {
+    $page = Page::find($id);
+    return view('page-layout', compact('page'));
+});
+Route::get('services/{id}', function ($id) {
     $ser = Service::find($id);
-    return view('service-layout-en', compact('ser'));
+    return view('service-layout', compact('ser'));
 });
 
 Route::get('services_ar/{id}', function ($id) {
@@ -162,34 +175,46 @@ Route::get('services_ar/{id}', function ($id) {
 
 Route::get('admin', 'AdminController@index')->middleware('auth');
 Route::post('admin/slider', 'AdminController@add_slider')->middleware('auth');
-Route::post('admin/album', 'AdminController@add_album')->middleware('auth');
+Route::post('portfolio/portfolio', 'AdminController@add_portfolio')->middleware('auth');
 Route::delete('admin/del-slider', 'AdminController@delete_slider')->middleware('auth');
-Route::delete('admin/del-album', 'AdminController@delete_album')->middleware('auth');
+Route::delete('admin/delete-portfolio/{id}', 'AdminController@delete_portfolio')->middleware('auth');
 Route::get('admin/delete-slider', function () {
     return view('admin.delete-slider');
 })->middleware('auth');
-Route::get('admin/delete-album', function () {
-    return view('admin.delete-album');
+Route::get('admin/delete-portfolio', function () {
+    $portfolio = Portfolio::all();
+    return view('admin.delete-portfolio', compact('portfolio'));
 })->middleware('auth');
 Route::get('admin/add-slider', function () {
     return view('admin.add-slider');
 })->middleware('auth');
-Route::get('admin/add-album', function () {
-    return view('admin.add-album');
+Route::get('admin/add-portfolio', function () {
+    return view('admin.add-portfolio');
 })->middleware('auth');
 Route::get('admin/page', 'AdminController@show')->middleware('auth');
+
+Route::get('admin/service', 'AdminController@show_service')->middleware('auth');
 Route::get('admin/create-page', function () {
     return view('admin.create-page');
+})->middleware('auth');
+Route::get('admin/create-service', function () {
+    return view('admin.create-service');
 })->middleware('auth');
 
 Route::post('sub-menu', 'AdminController@submenu')->middleware('auth');
 Route::post('main-menu', 'AdminController@mainmenu')->middleware('auth');
-Route::post('admin', 'AdminController@store')->middleware('auth');
-Route::delete('admin/{id}', 'AdminController@destroy')->middleware('auth');
+Route::post('admin', 'AdminController@store_page')->middleware('auth');
+Route::post('admin/store-service', 'AdminController@store_service')->middleware('auth');
+
+Route::delete('admin/{id}', 'AdminController@destroy_page')->middleware('auth');
+Route::delete('admin/service/{id}', 'AdminController@destroy_service')->middleware('auth');
+
 Route::get('admin/{id}/edit', 'AdminController@edit')->middleware('auth');
+Route::get('admin/service/{id}/edit', 'AdminController@edit_service')->middleware('auth');
 Route::get('admin/{id}/edit_menu', 'AdminController@edit_menu')->middleware('auth');
 
 Route::post('admin/{id}', 'AdminController@update')->middleware('auth');
+Route::post('admin/service/{id}', 'AdminController@update_service')->middleware('auth');
 Route::post('admin_edit/{id}', 'AdminController@updatemenu')->middleware('auth');
 
 Route::get('admin/sub-menu', function () {
@@ -204,3 +229,18 @@ Route::get('admin/delete-menu', function () {
 })->middleware('auth');
 Route::delete('admin/delete-menu/{id}', 'AdminController@del')->middleware('auth');
 Route::delete('admin/submenu_edit', 'AdminController@editsub')->middleware('auth');
+
+
+Route::get('admin/home-text', function () {
+    $description = (Home::first()->description);
+    return view('admin.home-text', compact('description'));
+})->middleware('auth');
+
+
+Route::get('admin/aboutus-text', function () {
+    $description = (About::first()->description);
+    return view('admin.aboutus-text', compact('description'));
+})->middleware('auth');
+
+Route::post('home-text', 'AdminController@hometext')->middleware('auth');
+Route::post('aboutus-text', 'AdminController@aboutustext')->middleware('auth');

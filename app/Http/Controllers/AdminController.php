@@ -6,10 +6,13 @@ use Illuminate\Http\Request;
 use App\Service;
 use App\Slider;
 use App\Menu;
+use App\Home;
+use App\About;
 use Intervention\Image\Facades\Image;
 use File;
-
-
+use Illuminate\Support\Facades\App;
+use App\Portfolio;
+use App\Page;
 
 class AdminController extends Controller
 {
@@ -23,10 +26,15 @@ class AdminController extends Controller
 
     public function show()
     {
-        $ser = Service::all();
+        $ser = Page::all();
         return view('admin.pages', compact('ser'));
     }
 
+    public function show_service()
+    {
+        $ser = Service::all();
+        return view('admin.services', compact('ser'));
+    }
 
     public function delete_slider()
     {
@@ -57,31 +65,30 @@ class AdminController extends Controller
         return redirect('/admin');
     }
 
-    public function add_album(Request $request)
+    public function add_portfolio(Request $request)
     {
         $this->validate(request(), [
             'image' => 'required'
         ]);
-        $album = new Album;
+        $portfolio = new Portfolio;
         $image = request()->image;
         $imageName = md5(uniqid(rand() * (time()))) . '.' . $image->getClientOriginalExtension();
         $savePath = public_path(self::UPLOAD_PATH . $imageName);
         Image::make($image)->save($savePath, 100);
         $fullImagePath = $imageName;
-        $album->image = $fullImagePath;
-        $album->save();
+        $portfolio->image = $fullImagePath;
+        $portfolio->save();
         //  session()->flash('message', 'Image Added!');
-        return redirect('/admin/add-album');
+        return redirect('/admin/add-portfolio');
     }
 
-    public function delete_album()
+    public function delete_portfolio($id)
     {
-        $album = Album::find(request('image'));
-        File::delete('uploads/' . $album->image);
-        $album->delete();
-        // session()->flash('message', 'Image Deleted!');
-
-        return redirect('/admin/delete-album');
+        $portfolio = \App\Portfolio::find($id);
+        $portfolio->delete();
+        File::delete('uploads/' . $portfolio->image);
+        //session()->flash('message', 'Portfolio Image Deleted!');
+        return redirect('/admin');
     }
 
 
@@ -126,18 +133,48 @@ class AdminController extends Controller
 
     public function edit($id)
     {
+        $page = Page::find($id);
+        return view('admin.edit', compact('page'));
+    }
+
+    public function edit_service($id)
+    {
         $serv = Service::find($id);
-        return view('admin.edit', compact('serv'));
+        return view('admin.edit-service', compact('serv'));
     }
 
     public function update($id)
     {
+        $page = Page::find($id);
+        $fn = $page->title_en;
+        $page->title_en = request('title_en');
+        //  $page->title_ar = request('title_ar');
+        $page->description_en = request('description_en');
+        // $page->description_ar = request('description_ar');
+
+        $image = request()->image;
+        if ($image == null) { } else {
+            $imageName = md5(uniqid(rand() * (time()))) . '.' . $image->getClientOriginalExtension();
+            $savePath = public_path(self::UPLOAD_PATH . $imageName);
+            Image::make($image)->save($savePath, 100);
+            $fullImagePath = $imageName;
+            $page->image = $fullImagePath;
+        }
+        //  $page->Menu_id = Menu::where('title_en', request('menu'))->first()->id;
+        $page->save();
+        //  session()->flash('message', 'Page Updated!');
+
+        return redirect('/admin');
+    }
+
+    public function update_service($id)
+    {
         $serv = Service::find($id);
         $fn = $serv->title_en;
         $serv->title_en = request('title_en');
-        $serv->title_ar = request('title_ar');
+        //  $serv->title_ar = request('title_ar');
         $serv->description_en = request('description_en');
-        $serv->description_ar = request('description_ar');
+        //  $serv->description_ar = request('description_ar');
 
         $image = request()->image;
         if ($image == null) { } else {
@@ -147,7 +184,7 @@ class AdminController extends Controller
             $fullImagePath = $imageName;
             $serv->image = $fullImagePath;
         }
-        $serv->Menu_id = Menu::where('title_en', request('menu'))->first()->id;
+        //  $serv->Menu_id = Menu::where('title_en', request('menu'))->first()->id;
         $serv->save();
         //  session()->flash('message', 'Page Updated!');
 
@@ -172,34 +209,88 @@ class AdminController extends Controller
     }
 
 
-    public function store()
+    public function store_page()
     {
         $this->validate(request(), [
-            'title_ar' => 'required',
             'title_en' => 'required',
             'description_en' => 'required',
-            'description_ar' => 'required',
             'image' => 'required'
         ]);
-        $serv = new Service;
-        $serv->title_en = request('title_en');
-        $serv->title_ar = request('title_ar');
-        $serv->description_en = request('description_en');
-        $serv->description_ar = request('description_ar');
+        $page = new Page();
+        $page->title_en = request('title_en');
+        //$page->title_ar = request('title_ar');
+        $page->description_en = request('description_en');
+        //$page->description_ar = request('description_ar');
         $image = request()->image;
         $imageName = md5(uniqid(rand() * (time()))) . '.' . $image->getClientOriginalExtension();
         $savePath = public_path(self::UPLOAD_PATH . $imageName);
         Image::make($image)->save($savePath, 100);
         $fullImagePath = $imageName;
-        $serv->image = $fullImagePath;
-        $serv->Menu_id = Menu::where('title_en', request('submenu'))->first()->id;
-        $serv->save();
+        $page->image = $fullImagePath;
+        // $page->Menu_id = Menu::where('title_en', request('submenu'))->first()->id;
+        $page->save();
         // session()->flash('message', 'Page Added!');
 
         return redirect('/admin');
     }
 
-    public function destroy($id)
+    public function store_service()
+    {
+        $this->validate(request(), [
+            'title_en' => 'required',
+            'description_en' => 'required',
+            'image' => 'required'
+        ]);
+        $service = new Service();
+        $service->title_en = request('title_en');
+        //   $service->title_ar = request('title_ar');
+        $service->description_en = request('description_en');
+        //  $service->description_ar = request('description_ar');
+        $image = request()->image;
+        $imageName = md5(uniqid(rand() * (time()))) . '.' . $image->getClientOriginalExtension();
+        $savePath = public_path(self::UPLOAD_PATH . $imageName);
+        Image::make($image)->save($savePath, 100);
+        $fullImagePath = $imageName;
+        $service->image = $fullImagePath;
+        //   $service->Menu_id = Menu::where('title_en', request('submenu'))->first()->id;
+        $service->save();
+        // session()->flash('message', 'service Added!');
+
+        return redirect('/admin');
+    }
+
+
+    public function hometext(Request $request)
+    {
+        $this->validate(request(), [
+            'description' => 'required',
+        ]);
+        // dd($request);
+        Home::first()->update($request->all());
+        return redirect('/admin');
+    }
+
+    public function aboutustext(Request $request)
+    {
+        $this->validate(request(), [
+            'description' => 'required',
+        ]);
+        // dd($request);
+        About::first()->update($request->all());
+        return redirect('/admin');
+    }
+
+    public function destroy_page($id)
+    {
+        $page = Page::find($id);
+        File::delete('uploads/' . $page->image);
+        $page->delete();
+        //session()->flash('message','Page Deleted!');
+
+        return redirect('/admin');
+    }
+
+    public function destroy_service($id)
     {
         $serv = Service::find($id);
         File::delete('uploads/' . $serv->image);
