@@ -1,7 +1,15 @@
 <?php $__env->startSection('content'); ?>
 <div class="col-md-12 main">
     <div class="content-top-1">
+        <div>
+            <div class="col-md-10">
+                <h1>Add Portfolio Images</h1>
+            </div>
 
+
+        </div>
+        <div class="space"></div>
+        <hr>
         <div class="mTop10">
             <form method="POST" action="/portfolio/portfolio" enctype="multipart/form-data">
                 <?php echo e(csrf_field()); ?>
@@ -17,7 +25,7 @@
                 </div>
 
 
-                <div class="form-group">
+                <div class="form-group col-md-3">
                     <input class="btn btn-primary form-control" type="submit" value="Save">
                 </div>
 
