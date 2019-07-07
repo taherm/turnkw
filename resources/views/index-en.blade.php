@@ -106,51 +106,20 @@
         </div>
         <div class="row text-center text-md-left mt-4">
 
-
+            @foreach($services as $service)
             <div class="col-md-4">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-4">
-                        <img class="img-fluid mb-4" src="{{asset('uploads/vision.png')}}" alt="">
+                        <img class="img-fluid mb-4" src="{{asset('uploads/'.$service->image)}}" alt="">
                     </div>
                     <div class="col-lg-8">
-                        <h4 class="mb-1">Vision</h4>
-                        <p>A new dimension is added in all aspects of life with design, innovation, and achievement of
-                            the best
-                            quality, leading the industry with competitiveness and team spirit, and becoming the most
-                            successful
-                            design company in our region</p>
+                        <h4 class="mb-1">{{$service->title_en}}</h4>
+                        {!!$service->description_en!!}
 
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="row justify-content-center justify-content-md-start">
-                    <div class="col-4">
-                        <img class="img-fluid mb-4" src="{{asset('uploads/mission.png')}}" alt="">
-                    </div>
-                    <div class="col-lg-8">
-                        <h4 class="mb-1">Mission</h4>
-                        <p>A brand is created to add more precious value to the world’s success and beauty.</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="row justify-content-center justify-content-md-start">
-                    <div class="col-4">
-                        <img class="img-fluid mb-4" src="{{asset('uploads/values.png')}}" alt="">
-                    </div>
-                    <div class="col-lg-8">
-                        <h4 class="mb-1">Our Values</h4>
-                        <p>Achievement,Challenge,Competency,Creativity
-                            ,Honesty
-                            ,Loyalty
-                            ,Service
-                            ,Success</p>
-
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
