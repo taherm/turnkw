@@ -6,8 +6,8 @@
 
     <title>TurnKw</title>
 
-    <meta name="keywords" content="Tasaweeq" />
-    <meta name="description" content="Marketing Plan, Marketing Research, Marketing Consultation, Branding and Digital Marketing">
+    <meta name="keywords" content="TurnKw" />
+    <meta name="description" content="Design and Build!">
 
 
     <!-- Favicon -->
