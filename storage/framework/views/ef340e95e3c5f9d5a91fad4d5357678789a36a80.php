@@ -57,6 +57,18 @@
                             </li>
                             
                             <li>
+                                <a href="/admin/add-slider" class=" hvr-bounce-to-right">
+                                    <i class="fa fa-sliders nav_icon "></i>
+                                    <span class="nav-label black">Add Slider</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/admin/delete-slider" class=" hvr-bounce-to-right">
+                                    <i class="fa fa-sliders nav_icon "></i>
+                                    <span class="nav-label black">Delete Slider</span>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="/admin/home-text" class=" hvr-bounce-to-right">
                                     <i class="fa fa-clone nav_icon"></i>
                                     <span class="nav-label black">Home Text</span>

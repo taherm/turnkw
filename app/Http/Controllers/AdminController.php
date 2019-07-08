@@ -36,12 +36,13 @@ class AdminController extends Controller
         return view('admin.services', compact('ser'));
     }
 
-    public function delete_slider()
+    public function delete_slider($id)
     {
-        Slider::where('image', request('image'))->delete();
-        //  session()->flash('message', 'Slider Deleted!');
-
-        return redirect('/admin/delete-slider');
+        $slide = \App\Slider::find($id);
+        $slide->delete();
+        File::delete('uploads/' . $slide->image);
+        //session()->flash('message', 'Portfolio Image Deleted!');
+        return redirect('/admin');
     }
 
     public function add_slider(Request $request)
@@ -50,19 +51,16 @@ class AdminController extends Controller
         $this->validate(request(), [
             'image' => 'required'
         ]);
-        $slide = new Slider;
-        //$image=request()->image;
-        //ini_set('memory_limit','256M');
-        $path = $request->file('image')->store('public/uploads');
-        $path_parts = pathinfo($path);
-        //dd($path_parts['basename']);
-        //$fullImagePath =$imageName;
-        $slide->image = $path_parts['basename'];
-
-        $slide->save();
-        // session()->flash('message', 'Slider Added!');
-
-        return redirect('/admin');
+        $slider = new Slider();
+        $image = request()->image;
+        $imageName = md5(uniqid(rand() * (time()))) . '.' . $image->getClientOriginalExtension();
+        $savePath = public_path(self::UPLOAD_PATH . $imageName);
+        Image::make($image)->save($savePath, 100);
+        $fullImagePath = $imageName;
+        $slider->image = $fullImagePath;
+        $slider->save();
+        //  session()->flash('message', 'Image Added!');
+        return redirect('/admin/add-slider');
     }
 
     public function add_portfolio(Request $request)

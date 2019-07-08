@@ -6,6 +6,7 @@ use App\About;
 use App\Home;
 use App\Portfolio;
 use App\Page;
+use App\Slider;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,8 @@ Route::get('/', function () {
     $services = Service::all();
     $pages = Page::all();
     $home_page_text = Home::first()->description;
-    return view('index-en', compact('services', 'pages', 'home_page_text'));
+    $slider = Slider::latest()->first();
+    return view('index-en', compact('services', 'pages', 'home_page_text', 'slider'));
 });
 
 Route::get('/home-ar', function () {
@@ -176,7 +178,7 @@ Route::get('services_ar/{id}', function ($id) {
 Route::get('admin', 'AdminController@index')->middleware('auth');
 Route::post('admin/slider', 'AdminController@add_slider')->middleware('auth');
 Route::post('portfolio/portfolio', 'AdminController@add_portfolio')->middleware('auth');
-Route::delete('admin/del-slider', 'AdminController@delete_slider')->middleware('auth');
+Route::delete('admin/del-slider/{id}', 'AdminController@delete_slider')->middleware('auth');
 Route::delete('admin/delete-portfolio/{id}', 'AdminController@delete_portfolio')->middleware('auth');
 Route::get('admin/delete-slider', function () {
     return view('admin.delete-slider');

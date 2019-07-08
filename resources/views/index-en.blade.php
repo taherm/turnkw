@@ -20,7 +20,7 @@
 <div class="container">
     <div class="row text-center">
         <div class="col">
-            <img src="{{asset('uploads/1.jpg')}}" width="100%" height="400px">
+            <img src="{{asset('uploads/'.$slider->image)}}" width="100%" height="400px">
         </div>
     </div>
     {{--<div class="row text-center mt-5">
