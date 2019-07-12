@@ -21,7 +21,7 @@ class AdminController extends Controller
     public function index()
     {
         //  $ser=Service::all();
-        return view('admin.index', compact(session('message')));
+        return view('admin.index');
     }
 
     public function show()
@@ -41,7 +41,7 @@ class AdminController extends Controller
         $slide = \App\Slider::find($id);
         $slide->delete();
         File::delete('uploads/' . $slide->image);
-        //session()->flash('message', 'Portfolio Image Deleted!');
+        session()->flash('error', 'Home Image Deleted!');
         return redirect('/admin');
     }
 
@@ -59,7 +59,7 @@ class AdminController extends Controller
         $fullImagePath = $imageName;
         $slider->image = $fullImagePath;
         $slider->save();
-        //  session()->flash('message', 'Image Added!');
+        session()->flash('message', 'Home Image Added!');
         return redirect('/admin/add-slider');
     }
 
@@ -76,7 +76,7 @@ class AdminController extends Controller
         $fullImagePath = $imageName;
         $portfolio->image = $fullImagePath;
         $portfolio->save();
-        //  session()->flash('message', 'Image Added!');
+        session()->flash('message', 'Portfolio Image Added!');
         return redirect('/admin/add-portfolio');
     }
 
@@ -85,7 +85,7 @@ class AdminController extends Controller
         $portfolio = \App\Portfolio::find($id);
         $portfolio->delete();
         File::delete('uploads/' . $portfolio->image);
-        //session()->flash('message', 'Portfolio Image Deleted!');
+        session()->flash('error', 'Portfolio Image Deleted!');
         return redirect('/admin');
     }
 
@@ -160,7 +160,7 @@ class AdminController extends Controller
         }
         //  $page->Menu_id = Menu::where('title_en', request('menu'))->first()->id;
         $page->save();
-        //  session()->flash('message', 'Page Updated!');
+        session()->flash('message', 'Page Updated!');
 
         return redirect('/admin');
     }
@@ -184,7 +184,7 @@ class AdminController extends Controller
         }
         //  $serv->Menu_id = Menu::where('title_en', request('menu'))->first()->id;
         $serv->save();
-        //  session()->flash('message', 'Page Updated!');
+        session()->flash('message', 'Service Updated!');
 
         return redirect('/admin');
     }
@@ -227,7 +227,7 @@ class AdminController extends Controller
         $page->image = $fullImagePath;
         // $page->Menu_id = Menu::where('title_en', request('submenu'))->first()->id;
         $page->save();
-        // session()->flash('message', 'Page Added!');
+        session()->flash('message', 'Page Added!');
 
         return redirect('/admin');
     }
@@ -252,7 +252,7 @@ class AdminController extends Controller
         $service->image = $fullImagePath;
         //   $service->Menu_id = Menu::where('title_en', request('submenu'))->first()->id;
         $service->save();
-        // session()->flash('message', 'service Added!');
+        session()->flash('message', 'Service Added!');
 
         return redirect('/admin');
     }
@@ -265,6 +265,7 @@ class AdminController extends Controller
         ]);
         // dd($request);
         Home::first()->update($request->all());
+        session()->flash('message', 'Home Text Added!');
         return redirect('/admin');
     }
 
@@ -275,6 +276,7 @@ class AdminController extends Controller
         ]);
         // dd($request);
         About::first()->update($request->all());
+        session()->flash('message', 'About Us Text Added!');
         return redirect('/admin');
     }
 
@@ -283,7 +285,7 @@ class AdminController extends Controller
         $page = Page::find($id);
         File::delete('uploads/' . $page->image);
         $page->delete();
-        //session()->flash('message','Page Deleted!');
+        session()->flash('error', 'Page Deleted!');
 
         return redirect('/admin');
     }
@@ -293,7 +295,7 @@ class AdminController extends Controller
         $serv = Service::find($id);
         File::delete('uploads/' . $serv->image);
         $serv->delete();
-        //session()->flash('message','Page Deleted!');
+        session()->flash('error', 'Service Deleted!');
 
         return redirect('/admin');
     }

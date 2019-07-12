@@ -63,19 +63,19 @@
                             <li>
                                 <a href="/admin/add-slider" class=" hvr-bounce-to-right">
                                     <i class="fa fa-sliders nav_icon "></i>
-                                    <span class="nav-label black">Add Slider</span>
+                                    <span class="nav-label black">Add Home Page Image</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/admin/delete-slider" class=" hvr-bounce-to-right">
                                     <i class="fa fa-sliders nav_icon "></i>
-                                    <span class="nav-label black">Delete Slider</span>
+                                    <span class="nav-label black">Delete Home Page Image</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/admin/home-text" class=" hvr-bounce-to-right">
                                     <i class="fa fa-clone nav_icon"></i>
-                                    <span class="nav-label black">Home Text</span>
+                                    <span class="nav-label black">Home Page Text</span>
                                 </a>
                             </li>
                             <li>
@@ -132,6 +132,11 @@
                     </h2>
                     @if($flash=session('message'))
                     <div class="alert alert-success" id="flash-message">
+                        {{$flash}}
+                    </div>
+                    @endif
+                    @if($flash=session('error'))
+                    <div class="alert alert-danger" id="flash-message">
                         {{$flash}}
                     </div>
                     @endif

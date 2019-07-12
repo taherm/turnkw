@@ -33,10 +33,10 @@
 <script type="text/javascript">
 	var feed = new Instafeed({
 		get: 'user',
-		userId: '18973642',
+		userId: '2171523187',
 		limit: '4',
 		resolution: 'low_resolution',
-		accessToken: '18973642.1677ed0.4afd9743af5545219d07f80c56ea9c71',
+		accessToken: '2171523187.1677ed0.561888cf6a6b46f2bff739df247a2436',
 		template: '  <div class="col-sm-3"><a href="@{{link}}"><img src="@{{image}}" class="img-thumbnail img-responsive"/></a> </div>'
 	});
 	feed.run();

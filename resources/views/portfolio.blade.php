@@ -4,10 +4,10 @@
 
 
 
-<div class="container">
+<div class="container" oncontextmenu="return false;">
 	<br><br>
 
-	<div class="row portfolio-list lightbox m-0" data-plugin-options="{'delegate': 'a.lightbox-portfolio', 'type': 'image', 'gallery': {'enabled': true}}">
+	<div oncontextmenu="return false;" class="row portfolio-list lightbox m-0" data-plugin-options="{'delegate': 'a.lightbox-portfolio', 'type': 'image', 'gallery': {'enabled': true}}">
 		@foreach($portfolio as $image)
 		<div class="col-sm-6 col-lg-3">
 			<div class="portfolio-item">

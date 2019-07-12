@@ -4,7 +4,7 @@
 
 
 
-<br><br>
+
 <div class="container">
     <div class="row text-center">
         <div class="col">
@@ -17,7 +17,7 @@
 
 
 
-<br>
+
 <div class="container">
 
     <div class="row align-items-center">
