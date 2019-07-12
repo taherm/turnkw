@@ -35,7 +35,7 @@
             </div>
 
 
-            <a href="{{ route('logout') }}" class="btn pull-right" onclick="event.preventDefault();
+            <a href="{{ route('logout') }}" class="btn btn-danger pull-right" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                 Logout
             </a>

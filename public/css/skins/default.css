@@ -2841,7 +2841,7 @@ html[dir="rtl"] #header .tip-light:before {
 }
 
 #header .header-btn-collapse-nav {
-  background: #ffffff;
+  background: black;
 }
 
 @media (min-width: 992px) {

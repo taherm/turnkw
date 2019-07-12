@@ -16,9 +16,9 @@
                                 <input id="email" type="email" class="form-control<?php echo e($errors->has('email') ? ' is-invalid' : ''); ?>" name="email" value="<?php echo e(old('email')); ?>" required autofocus>
 
                                 <?php if($errors->has('email')): ?>
-                                    <span class="invalid-feedback">
-                                        <strong><?php echo e($errors->first('email')); ?></strong>
-                                    </span>
+                                <span class="invalid-feedback">
+                                    <strong><?php echo e($errors->first('email')); ?></strong>
+                                </span>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -30,9 +30,9 @@
                                 <input id="password" type="password" class="form-control<?php echo e($errors->has('password') ? ' is-invalid' : ''); ?>" name="password" required>
 
                                 <?php if($errors->has('password')): ?>
-                                    <span class="invalid-feedback">
-                                        <strong><?php echo e($errors->first('password')); ?></strong>
-                                    </span>
+                                <span class="invalid-feedback">
+                                    <strong><?php echo e($errors->first('password')); ?></strong>
+                                </span>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -55,10 +55,7 @@
 
                                 </button>
 
-                                <a class="btn btn-link" href="<?php echo e(route('password.request')); ?>">
-                                    <?php echo e(__('Forgot Your Password?')); ?>
-
-                                </a>
+                                
                             </div>
                         </div>
                     </form>
@@ -68,5 +65,4 @@
     </div>
 </div>
 <?php $__env->stopSection(); ?>
-
 <?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

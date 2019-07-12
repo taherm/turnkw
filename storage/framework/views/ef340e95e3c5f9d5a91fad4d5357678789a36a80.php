@@ -35,7 +35,7 @@
             </div>
 
 
-            <a href="<?php echo e(route('logout')); ?>" class="btn pull-right" onclick="event.preventDefault();
+            <a href="<?php echo e(route('logout')); ?>" class="btn btn-danger pull-right" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                 Logout
             </a>
