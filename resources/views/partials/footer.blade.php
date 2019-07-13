@@ -4,7 +4,7 @@
             <div class="row">
 
                 <div class="col-md-6">
-                    <a href="http://ideasowners.net">
+                    <a href="/">
                         <p style="font-size:18px;color:white">TurnKW Design and Build © 2019</p>
                     </a>
                 </div>
