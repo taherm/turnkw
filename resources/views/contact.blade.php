@@ -20,7 +20,8 @@
             <p>
                 <ul style="list-style-type:none;">
                     <li>
-                        <p><i class="fa fa-map-marker"></i> <strong>Address:</strong> Salmiya, Salem al Mubarak Street, Laila Gallery Complex, 1st Floor, Office 4</p>
+                        <p><i class="fa fa-map-marker"></i> <strong>Address:</strong> Salmiya, Salem al Mubarak Street,
+                            Laila Gallery Complex, 1st Floor, Office 4</p>
                     </li>
                     <li>
                         <p><i class="fa fa-phone"></i> <strong>Phone:</strong> (+965) 2205-4504</p>
@@ -30,6 +31,9 @@
                     </li>
                     <li>
                         <p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a style="color: grey;" href="mailto:info@turnkw.com">info@turnkw.com</a></p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-instagram"></i> <a href="https://www.instagram.com/turnkw" style="color:grey">TurnKw</a></p>
                     </li>
                 </ul>
             </p>

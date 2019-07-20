@@ -5,7 +5,7 @@
 
                 <div class="col-md-6">
                     <a href="/">
-                        <p style="font-size:18px;color:white">TurnKW Design and Build © 2019</p>
+                        <p style="font-size:18px;color:slategray">Turn Design and Build © 2019</p>
                     </a>
                 </div>
                 
