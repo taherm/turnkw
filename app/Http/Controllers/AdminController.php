@@ -16,7 +16,7 @@ use App\Page;
 
 class AdminController extends Controller
 {
-    const UPLOAD_PATH =  '/uploads/';
+    const UPLOAD_PATH =  'uploads/';
 
     public function index()
     {
