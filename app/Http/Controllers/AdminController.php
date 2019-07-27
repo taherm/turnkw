@@ -54,7 +54,7 @@ class AdminController extends Controller
         $slider = new Slider();
         $image = request()->image;
         $imageName = md5(uniqid(rand() * (time()))) . '.' . $image->getClientOriginalExtension();
-        $savePath = public_path(self::UPLOAD_PATH . $imageName);
+        $savePath = self::UPLOAD_PATH . $imageName;
         Image::make($image)->save($savePath, 100);
         $fullImagePath = $imageName;
         $slider->image = $fullImagePath;
