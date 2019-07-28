@@ -5,14 +5,13 @@
 
 
 
-<div class="container">
-    <div class="row text-center">
-        <div class="col">
-            <img src="<?php echo e(asset('uploads/'.$slider->image)); ?>" width="100%" height="400px">
-        </div>
+
+<div class="row text-center">
+    <div class="col">
+        <img src="<?php echo e(asset('uploads/'.$slider->image)); ?>" width="100%" height="400px">
     </div>
-    
 </div>
+
 
 
 

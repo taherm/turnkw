@@ -17,13 +17,13 @@
 
 
 {{--<br><br>--}}
-<div class="container">
-    <div class="row text-center">
-        <div class="col">
-            <img src="{{asset('uploads/'.$slider->image)}}" width="100%" height="400px">
-        </div>
+
+<div class="row text-center">
+    <div class="col">
+        <img src="{{asset('uploads/'.$slider->image)}}" width="100%" height="400px">
     </div>
-    {{--<div class="row text-center mt-5">
+</div>
+{{--<div class="row text-center mt-5">
     <div class="owl-carousel owl-theme" data-plugin-options="{'items': 6, 'autoplay': true, 'autoplayTimeout': 3000}">
         <div>
             <img class="img-fluid" src="{{asset('img/logos/logo-1.png')}}" alt="">
@@ -46,7 +46,6 @@
 
 </div>
 </div>--}}
-</div>
 
 
 

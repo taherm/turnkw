@@ -2846,7 +2846,7 @@ html[dir="rtl"] #header .tip-light:before {
 
 @media (min-width: 992px) {
   #header .header-nav-main nav>ul>li>a {
-    color: slategray
+    color: #656e67
   }
 
   #header .header-nav-main nav>ul>li>a.dropdown-toggle:after {
